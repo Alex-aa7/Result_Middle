@@ -1,4 +1,5 @@
 import "./App.css";
+import { Todo } from "./sandbox/todo";
 
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         Place for tasks
+        <Todo/>
       </header> 
     </div>
   );
