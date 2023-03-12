@@ -13,8 +13,9 @@ export const Todo =({title='default title', listStrings=[]})=> {
 }
 
 export const Todo2 =(props)=> {
-    const title=props.title||'default title 2';
-    const listStrings=props.listStrings||[];
+    // const title=props.title||'default title 2';
+    // const listStrings=props.listStrings||[];
+    const {title='', listStrings=[]}=props
 
     return (
         <div>
