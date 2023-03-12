@@ -1,8 +1,10 @@
-export const Todo =()=> {
+export const Todo =({listStrings=[]})=> {
     return (
         <div>
             <ul>
-                <li>123</li>
+                {listStrings.map((value)=>(
+                    <li>{value}</li>
+                ))}
             </ul>
         </div>
     )

@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         Place for tasks
-        <Todo/>
+        <Todo listStrings={[1,2,3]}/>
       </header> 
     </div>
   );
