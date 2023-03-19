@@ -1,16 +1,14 @@
 import { useState, useRef } from "react";
+import { TextInput } from "@mantine/core";
+
+const Icon=()=>(
+  <p style={{color: "blue", fontSize: 16}}>@</p>
+)
 
 function SignUp(props) {
   const formRef = useRef(null);
   const inputNameRef = useRef(null);
-  const [inputs, setInputs] = useState({
-    name: "",
-    nick: "",
-    email: "",
-    gender: "",
-    password: "",
-    password2: "",
-  });
+  const [inputs, setInputs] = useState({});
 
   const handleReset = () => {
     formRef.current.reset();
@@ -45,10 +43,14 @@ function SignUp(props) {
         }}
       >
         <p>{props.title}</p>
+        <p>{JSON.stringify(inputs)}</p>
         <input ref={inputNameRef} type={"text"} placeholder="Имя" name="name" />
         <input type={"text"} placeholder="Ник" name="nick" />
-        <input type={"email"} placeholder="Email" name="email" />
-        <input type={"radio"} placeholder="Полr" name="gender" />
+        <input type={"email"} placeholder="Email normal input" name="email"/>
+        <TextInput type={"email2"} placeholder="Email2" name="email2" icon={<Icon/>}/>
+        <TextInput type={"email3"} placeholder="Email3" name="email3" icon={'@'}/>
+        <label>Пол: M<input type={"radio"} placeholder="Пол" name="gender" value='M' /></label>
+        <label>Пол: Ж<input type={"radio"} placeholder="Пол" name="gender" value='F'/></label>
         <input type={"password"} placeholder="Пароль" name="password"/>
         <input type={"password"} placeholder="Повторить пароль" name="password2"/>
         <button type="submit">Submit </button>

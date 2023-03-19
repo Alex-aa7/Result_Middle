@@ -1,6 +1,7 @@
 import "./App.css";
+import InputForms from './components/InputForms/InputForms'
 
-import InputForms from "./components/InputForms/InputForms";
+// import InputForms from "./components/InputForms/InputForms";
 
 function App() {
   return (
