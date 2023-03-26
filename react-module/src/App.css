@@ -44,3 +44,21 @@
   align-items: center;
   justify-content: center;
 }
+
+.wrapper {
+  display: flex;
+}
+
+.list {
+  background-color: #ccc;
+  width: 40%;
+}
+
+.outlet {
+  display: flex;
+  flex-direction: column;
+  background-color: hwb(18 59% 5%);
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}

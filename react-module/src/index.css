@@ -9,5 +9,13 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monos pace;
+}
+
+.red {
+  color: salmon
+}
+
+.active {
+  color: green
 }

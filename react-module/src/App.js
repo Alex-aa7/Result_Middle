@@ -1,15 +1,13 @@
 import "./App.css";
-import InputForms from './components/InputForms/InputForms'
+import RikyMortyMainPage from "./components/RikyMorty/RikiMortyMainPage";
 
-// import InputForms from "./components/InputForms/InputForms";
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <InputForms />
-      </header>
-    </div>
+    <>
+    <RikyMortyMainPage/>
+    </>
   );
 }
 
