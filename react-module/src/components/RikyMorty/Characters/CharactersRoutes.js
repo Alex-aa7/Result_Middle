@@ -1,23 +1,36 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate, useParams } from "react-router-dom";
+import { characters } from "../data/characters";
 import { Character } from "./Character";
 import { CharactersLayout } from "./CharactersLayout";
 
 export function CharactersRoutes() {
   const nav = useNavigate();
-  const navHandler = (e) => {
-    let index = e.target.value;
+  const id=useParams();
+  console.log(id)
+    
+
+
+  const navHandler = (index) => {
     console.log(index);
-    //дописать ограничения для index
+    if (index > characters.length) {
+      index = characters.length;
+    }
+    if (index < 1) {
+      index = 1;
+    }
     return nav(`/characters/${index}`);
   };
+
   return (
     <>
-      <input
-        type="number"
-        name="id"
-        placeholder="введите"
-        onChange={(e) => navHandler(e)}
-      ></input>
+      <form>
+        <input
+          type="number"
+          name="id"
+          placeholder="введите"
+          onChange={(e) => navHandler(e.target.value)}
+        ></input>
+      </form>
       <Routes>
         <Route index element={<CharactersLayout />} />
         <Route element={<CharactersLayout />}>

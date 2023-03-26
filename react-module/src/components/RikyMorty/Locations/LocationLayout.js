@@ -1,4 +1,5 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { ListLinkComponent } from "../../ListLinkComponent";
 import { locations } from "../data/locations";
 
 export function LocationLayout() {
@@ -9,9 +10,7 @@ export function LocationLayout() {
           <h1>Location List</h1>
           <ul>
             {locations.map((el) => (
-              <Link to={`${el.id}`}>
-                <li>{el.name}</li>
-              </Link>
+              <ListLinkComponent key={el.id} el={el} />
             ))}
           </ul>
         </div>
