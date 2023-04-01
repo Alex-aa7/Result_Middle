@@ -1,6 +1,8 @@
 import "./App.css";
 import { Task3Hover } from "./tasks/task3-hover";
+import InputForms from './components/InputForms/InputForms'
 
+// import InputForms from "./components/InputForms/InputForms";
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
       </header> 
       <main>
         <Task3Hover/>
+        <InputForms />
       </main>
     </div>
   );
